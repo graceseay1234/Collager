@@ -1,0 +1,79 @@
+
+ ･ﾟﾟ･｡ Which files are necessary?･ﾟﾟ･｡
+
+[Model]
+    [Image Interface]
+        This file defines the Image interface, which represents an image as a two-dimensional array of RGB values.
+        It provides methods for adjusting the image, changing its colors, and converting it to and from HSL values.
+        The Image class is part of the Model package, which is used by the Project interface to represent the 
+	  composite image of all of the layers in the project, which is required for saving images and projects, 
+	  and using filters that require the image of all the layers under them to function like the difference, 
+	  multiply, and screen filters. 
+
+    [Project Interface]
+        This file defines the Project interface, which represents a Collager project.
+        A project contains multiple layers, and it provides methods for adding and removing layers, applying
+        filters to layers, and saving the project as an image or a text file. The Project class is a part of the
+        Model package, and is used by the Controller and ControllerImpl classes to store and manipulate project data.
+        The controller needs to interact with the Project interface to manage the overall project structure. The controller 
+	  parses user commands, and delegates to the relevant Project methods. 
+
+.・。.・゜✭・.・✫・゜・。..・。.・゜✭・.・✫・゜・。..・。.・゜✭・.・✫・。..・。.・゜✭・.・✫・。..・。.・゜✭・.・✫・。..・。.
+
+[Controller]
+    [Controller Interface]
+       This file defines the Controller interface, which specifies the methods that a
+       Collager project controller should have.
+       It includes methods for loading and saving projects, adding layers to a project, and applying filters to layers.
+       The Controller interface is necessary for the ControllerImpl class to work correctly,
+       as it provides a contract for the methods that the ControllerImpl class needs to override.
+
+    [ControllerImpl Interface]
+        This file provides the implementation for the Controller interface.
+        It is the main controller class for a Collager project, and it delegates to the Model and View
+        attributes to perform actions on the project data and interact with the GUI.
+        The ControllerImpl class needs to be included to compile the controller code because it provides the actual
+        implementation of the methods defined in the Controller interface.
+
+    [Features Interface]
+        This file defines the Features interface, which serves as an interface between the GUI View and the controller,
+        and essentially is another controller meant for working with the GUI. It is where the button clicks on the GUI 
+	  lead to, ensuring that the user's GUI input is parsed and enacted accordingly. The Features interface is necessary for the
+        FeaturesImpl class to work correctly, as it provides a contract for the methods that the FeaturesImpl
+        class needs to implement.
+
+    [FeaturesImpl Interface]
+        This file provides the implementation for the Features interface.
+        It is responsible for handling the GUI events and updating the GUI display as needed,
+        and it delegates to the GUIView, Project, and Controller attributes to perform actions on the
+        project data and interact with the controller.
+        The FeaturesImpl class needs to be included to compile the controller code because it provides the actual
+        implementation of the methods defined in the Features interface.
+
+.・。.・゜✭・.・✫・゜・。..・。.・゜✭・.・✫・゜・。..・。.・゜✭・.・✫・。..・。.・゜✭・.・✫・。..・。.・゜✭・.・✫・。..・。.
+
+[View]
+    [GUIView Interface]
+        This file defines the GUIView interface, which represents the GUI for a Collager project.
+        It provides methods for displaying the project data, handling user input, and updating the display.
+        The GUIView interface is used by the FeaturesImpl class to interact with the GUI, and it needs to be
+        included to compile the controller code because the FeaturesImpl class calls the methods defined in
+        the GUIView interface to do things like reset the display when the image is changed, and clear the 
+        textbox after it is used. Without this interface, the controller would not be able to display images 
+        or update the user interface.
+
+
+    [View Interface]
+        This file defines the View interface, which specifies the methods that a Collager project controller should have
+        to interact with the user through text. It includes methods for showing the user instructions and making them 
+        aware of errors that may occur throughout the program. 
+        The View interface is necessary for the ControllerImpl class to work correctly, as it provides a contract
+        for the methods that the ControllerImpl class needs to call to interact with the user through text.
+        Without this interface, the controller would not be able to display messages to the user.
+
+
+.・。.・゜✭・.・✫・゜・。..・。.・゜✭・.・✫・゜・。..・。.・゜✭・.・✫・。..・。.・゜✭・.・✫・。..・。.・゜✭・.・✫・。..・。.
+
+In summary, all of these interfaces are necessary for the controller to function properly.
+They allow the controller to interact with the model and view in a decoupled manner,
+and to execute the necessary functionality to perform image editing operations.

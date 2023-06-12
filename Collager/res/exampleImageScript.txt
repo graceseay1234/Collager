@@ -1,0 +1,20 @@
+new-project 200 200
+
+load-project C:\Users\25moo\OneDrive\Desktop\OOD\Group\Collager\res\projects\cottonCandyCat.txt
+
+add-layer Layer1
+add-layer Layer2
+add-layer Layer3
+
+add-image-to-layer Layer1 C:\Users\25moo\OneDrive\Desktop\OOD\Group\Collager\res\pictures\examplePNGsmall.png 0 10
+add-image-to-layer Layer2 C:\Users\25moo\OneDrive\Desktop\OOD\Group\Collager\res\pictures\exampleJPEGsmall.jpeg 40 50
+add-image-to-layer Layer3 C:\Users\25moo\OneDrive\Desktop\OOD\Group\Collager\res\pictures\CAT.ppm 50 50
+
+
+set-filter Layer1 green-component
+set-filter Layer2 multiply
+set-filter Layer3 difference
+
+save-image C:\Users\25moo\OneDrive\Desktop\OOD\Group\Collager\res\pictures\exampleImage.png
+
+quit

@@ -1,0 +1,25 @@
+new-project 240 240
+add-layer kittycat
+add-layer anotherkittycat
+add-image-to-layer kittycat C:\Users\25moo\OneDrive\Desktop\OOD\Group\Collager\res\pictures\bluecat.ppm 0 0
+add-image-to-layer anotherkittycat C:\Users\25moo\OneDrive\Desktop\OOD\Group\Collager\res\pictures\redcat.ppm 0 0
+set-filter anotherkittycat normal
+set-filter anotherkittycat screen
+set-filter anotherkittycat multiply
+set-filter anotherkittycat difference
+save-image C:\Users\25moo\OneDrive\Desktop\OOD\Group\Collager\res\pictures\scriptcat.ppm
+set-filter anotherkittycat blue-component
+set-filter anotherkittycat green-component
+set-filter anotherkittycat brighten-luma
+set-filter anotherkittycat brighten-intensity
+set-filter anotherkittycat brighten-value
+set-filter anotherkittycat darken-luma
+set-filter anotherkittycat darken-intensity
+set-filter anotherkittycat darken-value
+set-filter anotherkittycat red-component
+save-image C:\Users\25moo\OneDrive\Desktop\OOD\Group\Collager\res\pictures\scriptcatred.ppm
+save-project C:\Users\25moo\OneDrive\Desktop\OOD\Group\Collager\res\projects\scriptcatredproject.txt
+quit
+
+
+

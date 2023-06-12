@@ -1,0 +1,23 @@
+new-project 240 240
+add-layer theROCK
+add-layer theROCKPART2
+add-image-to-layer theROCK C:\Users\25moo\OneDrive\Desktop\OOD\Group\Collager\res\pictures\examplePNGsmall.png 0 0
+add-image-to-layer theROCKPART2 C:\Users\25moo\OneDrive\Desktop\OOD\Group\Collager\res\pictures\exampleJPEGsmall.jpeg 0 0
+set-filter theROCKPART2 normal
+set-filter theROCKPART2 difference
+set-filter theROCKPART2 multiply
+set-filter theROCKPART2 screen
+save-image C:\Users\25moo\OneDrive\Desktop\OOD\Group\Collager\res\pictures\magicrock.png
+set-filter theROCK red-component
+set-filter theROCK blue-component
+set-filter theROCK green-component
+set-filter theROCK brighten-luma
+set-filter theROCK brighten-intensity
+set-filter theROCK darken-luma
+set-filter theROCK darken-intensity
+set-filter theROCK darken-value
+set-filter theROCK brighten-value
+save-image C:\Users\25moo\OneDrive\Desktop\OOD\Group\Collager\res\pictures\magicrockalternatedimension.jpeg
+save-project C:\Users\25moo\OneDrive\Desktop\OOD\Group\Collager\res\projects\loveROCK.txt
+load-project C:\Users\25moo\OneDrive\Desktop\OOD\Group\Collager\res\projects\loveROCK.txt
+quit
